@@ -10,7 +10,7 @@
 ## Usage
 
 ```bash
-git clone https://github.com/RasmusTidselbak/al-formatter.git
+git clone https://github.com/pavledujkic/al-formatter-cli.git
 cd al-formatter/cli
 npm install -D
 export PATH=`pwd`/node_modules/.bin:$PATH
