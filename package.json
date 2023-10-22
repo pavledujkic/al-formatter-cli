@@ -1,0 +1,31 @@
+{
+    "name": "al-formatter-cli",
+    "version": "0.5.0",
+    "description": "Formatting AL code from a command line interface",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "start": "node ./lib/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RasmusTidselbak/al-formatter.git"
+    },
+    "keywords": [
+        "al",
+        "formatter"
+    ],
+    "author": "tpokorra",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/RasmusTidselbak/al-formatter/issues"
+    },
+    "devDependencies": {
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^2.2.43",
+        "@types/node": "^6.0.88",
+        "commander": "^6.2.1",
+        "glob": "^7.1.6",
+        "typescript": "^4.1.3"
+    }
+}
