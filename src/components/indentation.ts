@@ -1,4 +1,5 @@
 import { KeywordHandler } from "./keyword";
+
 export class IndentationHandler {
   private level: string[];
   private lines: string[];

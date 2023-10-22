@@ -1,14 +1,14 @@
 import { KeywordHandler } from "./keyword";
+
 export class VariableHandler {
   private lines: string[];
-  /**
-   * sort
-   */
+
   public sort(doc: string): string {
     this.lines = doc.split(/\r?\n/g);
     let varIndex: number = 0;
     let varArray: string[];
     let searching: boolean = false;
+
     this.lines.forEach((line, i) => {
       // Store first index id
       if (line.trim() === "var") {
@@ -31,6 +31,7 @@ export class VariableHandler {
           if (line.replace(/\s/g, "").length) {
             if (!KeywordHandler.keywordExists(";", line)) {
               let j: number = i;
+
               while (!KeywordHandler.keywordExists(";", line)) {
                 j++;
                 line += `\n${this.lines[j].trim()}`;
@@ -41,6 +42,7 @@ export class VariableHandler {
           }
         } else {
           searching = false;
+
           if (varArray.length >= 1) {
             varArray = varArray.sort((a, b) => {
               const aWeight = this.varTypeWeight(a);
@@ -66,7 +68,6 @@ export class VariableHandler {
                     this.lines[j++] = newLine;
                   }
                 });
-                // this.lines[j] = varLine;
               } else {
                 this.lines[j++] = "";
               }

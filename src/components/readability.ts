@@ -1,11 +1,10 @@
 import { KeywordHandler } from "./keyword";
+
 export class ReadabilityHandler {
   private lines: string[];
   private words: string[];
   private newWords: string[];
-  /**
-   * spacing_binaryoperator
-   */
+
   public spacing(doc: string): string {
     this.lines = doc.split(/\r?\n/g);
     const edits: string[] = [];
